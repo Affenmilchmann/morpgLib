@@ -17,7 +17,7 @@ from src.PBar import PBar
 from src.TxtBar import TxtBar
 
 from pathlib import Path
-Path("\morphlib\results").mkdir(parents=True, exist_ok=True)
+Path("/morphlib/results").mkdir(parents=True, exist_ok=True)
 
 morph = MorphAnalyzer()
 
@@ -212,8 +212,8 @@ class MorphAn():
         self.pos_norm_forms = data['norm_forms_by_POS']
         self.tokens = data['tokens']
         self.norm_forms = data['norm_forms']
-        self.sentences = data['sentences']
-        self.norm_sentences = data['norm_sentences']
+        #self.sentences = data['sentences']
+        #self.norm_sentences = data['norm_sentences']
 
     def save(self, file_name, encoding='utf8'):
         with open(file_name, "w", encoding=encoding) as f:
